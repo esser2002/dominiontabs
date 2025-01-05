@@ -1,5 +1,15 @@
 [
     {
+        "card_tag": "Torpedo",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "cost": "0",
+        "types": [
+            "Action"
+        ]
+    },
+    {
         "card_tag": "Alms",
         "cardset_tags": [
             "adventures"

@@ -466,5 +466,15 @@
         "set_text": "",
         "text_icon": "*",
         "upgrades": "seaside1stEdition"
+    },
+    "x-wing": {
+        "edition": [
+            "1",
+            "latest"
+        ],
+        "image": "alchemy_set.png",
+        "set_name": "*x-wing*",
+        "set_text": "",
+        "text_icon": "*"
     }
 }
