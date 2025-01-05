@@ -1,6 +1,15 @@
 [
     {
         "card_type": [
+            "Upgrade"
+        ],
+        "card_type_image": "",
+        "defaultCardCount": 10,
+        "tabCostHeightOffset": -1,
+        "tabTextHeightOffset": 0
+    },
+    {
+        "card_type": [
             "Action"
         ],
         "card_type_image": "action.png",
