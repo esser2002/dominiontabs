@@ -28,6 +28,7 @@ class Card(object):
         types=None,
         cost="",
         description="",
+        upgrade_symbol="",
         potcost=0,
         debtcost=0,
         extra="",
