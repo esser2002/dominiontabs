@@ -1370,7 +1370,7 @@ class DividerDrawer(object):
             # x, y = center of baseline
             symbol = str(text)
             font = self.fontStyle["Upgrade"]
-            iconFontSize = fontSize*1.3
+            iconFontSize = fontSize * 1.3
 
             # handle superscript cost modifiers
             mod = ""
