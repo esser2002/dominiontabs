@@ -1390,12 +1390,14 @@ class DividerDrawer(object):
             if color is not None:
                 self.canvas.setFillColorRGB(*color)
             self.canvas.setFont(font, fontSize)
-            left = x - totalWidth / 2
-            right = x + totalWidth / 2
+            left = x
+            right = x + totalWidth
             for i, digit in enumerate(symbol):
                 prefix = sum(costWidth[:i]) + i * spacing
                 self.canvas.drawString(left + prefix, y, digit)
             self.canvas.restoreState()
+
+            return totalWidth
 
         def scaleImage(name, x, y, h, mask="auto"):
             path = resource_handling.get_image_filepath(name)
@@ -1413,8 +1415,7 @@ class DividerDrawer(object):
 
         width = 0
         if upgrade:
-            drawUpgradeText(upgrade, x + width / 2, textHeight)
-            
+            width += drawUpgradeText(upgrade, x + width / 2, textHeight*1.5)
         if cost and (cost[0] != "0" or not debt and not pots):
             dx = scaleImage("coin.png", x + width, coinHeight, coinSize)
             drawCostText(cost, x + width + dx / 2, textHeight)
