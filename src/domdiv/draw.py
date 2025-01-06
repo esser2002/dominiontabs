@@ -544,6 +544,7 @@ class DividerDrawer(object):
             "Times-Bold": None,
             "Times-Italic": None,
             "Helvetica-Bold": None,
+            "Helvetica": None,
             "Courier": None,
         }
 
@@ -615,6 +616,7 @@ class DividerDrawer(object):
         # Determine the best matching fonts for each font type.
         fontprefs = {
             "Name": [  # card names & types
+                "Helvetica",
                 "TrajanPro-Bold",
                 "MinionPro-Regular",
                 (
@@ -1368,6 +1370,7 @@ class DividerDrawer(object):
             # x, y = center of baseline
             symbol = str(text)
             font = self.fontStyle["Upgrade"]
+            iconFontSize = fontSize*1.3
 
             # handle superscript cost modifiers
             mod = ""
@@ -1375,7 +1378,7 @@ class DividerDrawer(object):
 
             # get text width metrics
             costWidth = [
-                pdfmetrics.stringWidth(digit, font, fontSize) for digit in symbol
+                pdfmetrics.stringWidth(digit, font, iconFontSize) for digit in symbol
             ]
             spacing = -2.0  # compress multi-digit costs
             totalWidth = (
@@ -1389,7 +1392,7 @@ class DividerDrawer(object):
             self.canvas.saveState()
             if color is not None:
                 self.canvas.setFillColorRGB(*color)
-            self.canvas.setFont(font, fontSize)
+            self.canvas.setFont(font, iconFontSize)
             left = x
             right = x + totalWidth
             for i, digit in enumerate(symbol):
