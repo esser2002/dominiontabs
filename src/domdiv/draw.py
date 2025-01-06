@@ -1415,7 +1415,7 @@ class DividerDrawer(object):
 
         width = 0
         if upgrade:
-            width += drawUpgradeText(upgrade, x + width / 2, textHeight*1.5)
+            width += drawUpgradeText(upgrade, x + width / 2, textHeight * 1.5)
         if cost and (cost[0] != "0" or not debt and not pots):
             dx = scaleImage("coin.png", x + width, coinHeight, coinSize)
             drawCostText(cost, x + width + dx / 2, textHeight)
