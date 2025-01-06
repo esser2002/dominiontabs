@@ -6,7 +6,8 @@
         ],
         "types": [
             "Upgrade"
-        ]
+        ],
+        "upgrade_symbol": "P"
     },
     {
         "card_tag": "Alms",
