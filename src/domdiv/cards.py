@@ -57,6 +57,7 @@ class Card(object):
         self.description = description
         self.potcost = potcost
         self.debtcost = debtcost
+        self.upgrade_symbol = upgrade_symbol
         self.extra = extra
         self.card_tag = card_tag
         self.cardset_tags = cardset_tags

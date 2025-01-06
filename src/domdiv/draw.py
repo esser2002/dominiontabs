@@ -536,6 +536,9 @@ class DividerDrawer(object):
                 "MinionPro-It.ttf",
                 "Minion Pro Italic.ttf",
             ],
+            "X-Wing Miniatures": [
+                "xwing-miniatures.ttf",
+            ],
             # Built-in fonts
             "Times-Roman": None,
             "Times-Bold": None,
@@ -634,6 +637,9 @@ class DividerDrawer(object):
                 "MinionStd-Black",
                 "MinionPro-Bold",
                 "Times-Bold" if langlatin1 or timesTTF_not_found else "Times-Bold-TTF",
+            ],
+            "Upgrade": [  # X-wing upgrade icons
+                "X-Wing Miniatures",
             ],
             "PlusCost": [  # card cost superscript "+" modifiers
                 "Helvetica-Bold",
@@ -1358,6 +1364,39 @@ class DividerDrawer(object):
                 self.canvas.drawString(right - modWidth, y + modHeight, mod)
             self.canvas.restoreState()
 
+        def drawUpgradeText(text, x, y, color=None):
+            # x, y = center of baseline
+            symbol = str(text)
+            font = self.fontStyle["Upgrade"]
+
+            # handle superscript cost modifiers
+            mod = ""
+            modSize = modSpacing = modWidth = modHeight = 0
+
+            # get text width metrics
+            costWidth = [
+                pdfmetrics.stringWidth(digit, font, fontSize) for digit in symbol
+            ]
+            spacing = -2.0  # compress multi-digit costs
+            totalWidth = (
+                sum(costWidth)
+                + spacing * max(0, len(costWidth) - 1)
+                + modSpacing
+                + modWidth
+            )
+
+            # write the text
+            self.canvas.saveState()
+            if color is not None:
+                self.canvas.setFillColorRGB(*color)
+            self.canvas.setFont(font, fontSize)
+            left = x - totalWidth / 2
+            right = x + totalWidth / 2
+            for i, digit in enumerate(symbol):
+                prefix = sum(costWidth[:i]) + i * spacing
+                self.canvas.drawString(left + prefix, y, digit)
+            self.canvas.restoreState()
+
         def scaleImage(name, x, y, h, mask="auto"):
             path = resource_handling.get_image_filepath(name)
             with Image.open(path) as img:
@@ -1370,8 +1409,12 @@ class DividerDrawer(object):
         cost = card.cost
         debt = card.debtcost
         pots = card.potcost
+        upgrade = card.upgrade_symbol
 
         width = 0
+        if upgrade:
+            drawUpgradeText(upgrade, x + width / 2, textHeight)
+            
         if cost and (cost[0] != "0" or not debt and not pots):
             dx = scaleImage("coin.png", x + width, coinHeight, coinSize)
             drawCostText(cost, x + width + dx / 2, textHeight)
