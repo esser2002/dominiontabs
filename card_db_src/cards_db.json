@@ -10,6 +10,156 @@
         "upgrade_symbol": "P"
     },
     {
+        "card_tag": "Talent",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "E"
+    },
+    {
+        "card_tag": "Device",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "B"
+    },
+    {
+        "card_tag": "Illicit",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "I"
+    },
+    {
+        "card_tag": "Astromech",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "A"
+    },
+    {
+        "card_tag": "Sensor",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "S"
+    },
+    {
+        "card_tag": "Force Power",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "F"
+    },
+    {
+        "card_tag": "Tech",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "X"
+    },
+    {
+        "card_tag": "Turret",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "U"
+    },
+    {
+        "card_tag": "Cannon",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "C"
+    },
+    {
+        "card_tag": "Missile",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "M"
+    },
+    {
+        "card_tag": "Gunner",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "Y"
+    },
+    {
+        "card_tag": "Configuration",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "n"
+    },
+    {
+        "card_tag": "Title",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "t"
+    },
+    {
+        "card_tag": "Modification",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "m"
+    },
+    {
+        "card_tag": "Crew ",
+        "cardset_tags": [
+            "x-wing"
+        ],
+        "types": [
+            "Upgrade"
+        ],
+        "upgrade_symbol": "W"
+    },
+    {
         "card_tag": "Alms",
         "cardset_tags": [
             "adventures"
