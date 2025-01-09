@@ -1,6 +1,6 @@
 #X-wing dividers
 
-This fork allows for generation of Sumpfork-style tabs for storing cards for the X-Wing miniatures game.
+This fork allows for generation of Sumpfork-style tabs for storing upgrade cards for the X-Wing miniatures game.
 
 The icons used are taken from the X-wing icons font, found here: https://github.com/geordanr/xwing-miniatures-font
 
