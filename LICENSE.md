@@ -10,3 +10,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 **Exceptions:**
 The game 'Dominion' and all its expansions are games published by Rio Grande Games. Rio Grande Games holds all rights to these games, and all the text and images used in this code that stem from these games, namely all images and text from rules and/or cards. These are used here with permission from Rio Grande Games under the condition that they not be used for commercial purposes. You must obtain separate permission from Rio Grande Games before re-using these images and texts in any other context.
+
+A collection of icons used originate from the 'X-Wing Miniatures Game', and are not covered by this license.
